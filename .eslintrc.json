@@ -4,7 +4,8 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended","prettier","prettier/react"],
+  "extends": ["airbnb","prettier","prettier/react"],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -14,9 +15,11 @@
   },
   "plugins": ["react"],
   "rules": {
-    "semi": ["warn", "always"],
-    "quotes": ["warn", "double"],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    /* "semi": ["warn", "always"],
+    "quotes": ["warn", "single"],
     "react/jsx-uses-react": "warn",
-    "react/jsx-uses-vars": "warn"
+    "react/jsx-uses-vars": "warn" */
   }
+
 }
